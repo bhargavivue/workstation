@@ -16,6 +16,6 @@ class RequestModel(BaseModel):
     WorkingHoursStartTime: str
     WorkingHoursEndTime: str
     Movable:bool=True
-
+    
     class Config:
      orm_mode =True

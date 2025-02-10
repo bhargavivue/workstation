@@ -3,7 +3,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Boolean, Column, String
 
-DATABASE_URL ="mysql+pymysql://root:root1234@localhost:3306/softdev"   
+DATABASE_URL ="mysql+pymysql://root:root1234@localhost:3306/softdev" 
+#DATABASE_URL = "mysql+pymysql://root:root1234@host.docker.internal:3306/softdev"
 engine=create_engine(DATABASE_URL, pool_recycle=3600, echo=True)
 SessionLocal=sessionmaker(autocommit=False,autoflush=False,bind=engine)
 
